@@ -1,0 +1,15 @@
+{
+    "name": "napse/bundle-maker",
+    "description": "Napse Bundle Maker",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "Napse\\BundleMaker\\": "src\/"
+        }
+    },
+    "require": {
+        "php": "^8.4",
+        "symfony\/framework-bundle": "^6.4"
+    },
+    "version": "1"
+}

@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+    Napse\BundleMaker\Command\:
+        resource: '../src/Command/*'
+        tags: ['console.command']
+    Napse\BundleMaker\Service\:
+        resource: '../src/Service/*'
+    Napse\BundleMaker\EventSubscriber\:
+        resource: '../src/EventSubscriber/*'
