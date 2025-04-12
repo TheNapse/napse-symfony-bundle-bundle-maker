@@ -121,7 +121,7 @@ class CreateBundleCommand extends Command
             "    {\n" .
             "        \$loader = new YamlFileLoader(\n" .
             "            \$container,\n" .
-            "            new FileLocator(__DIR__ . '/../config')\n" .
+            "            new FileLocator(__DIR__ . '/../../config')\n" .
             "        );\n" .
             "        \$loader->load('services.yaml');\n" .
             "    }\n" .
@@ -136,12 +136,12 @@ class CreateBundleCommand extends Command
             "        autoconfigure: true\n" .
             "        public: true\n" .
             "    {$namespace}\\Command\\:\n" .
-            "        resource: '../../src/Command/*'\n" .
+            "        resource: '../src/Command/*'\n" .
             "        tags: ['console.command']\n" .
             "    {$namespace}\\Service\\:\n" .
-            "        resource: '../../src/Service/*'\n" .
+            "        resource: '../src/Service/*'\n" .
             "    {$namespace}\\EventSubscriber\\:\n" .
-            "        resource: '../../src/EventSubscriber/*'\n";
+            "        resource: '../src/EventSubscriber/*'\n";
     }
 
     private function generateFlexRecipeManifest(string $bundleName): string
